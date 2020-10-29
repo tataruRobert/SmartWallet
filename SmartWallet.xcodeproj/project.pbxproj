@@ -17,6 +17,9 @@
 		1E0348D9254B429400A9C52C /* UIFont+Rounder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348D8254B429400A9C52C /* UIFont+Rounder.swift */; };
 		1E0348EF254B440200A9C52C /* OverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348EE254B440200A9C52C /* OverviewVC.swift */; };
 		1E0348F7254B476F00A9C52C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348F6254B476F00A9C52C /* CoreDataStack.swift */; };
+		1E0348FD254B551F00A9C52C /* OverviewBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348FC254B551F00A9C52C /* OverviewBudgetView.swift */; };
+		1E034905254B55B200A9C52C /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E034904254B55B200A9C52C /* BalanceView.swift */; };
+		1E03490A254B577F00A9C52C /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E034909254B577F00A9C52C /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		1E0348D8254B429400A9C52C /* UIFont+Rounder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Rounder.swift"; sourceTree = "<group>"; };
 		1E0348EE254B440200A9C52C /* OverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewVC.swift; sourceTree = "<group>"; };
 		1E0348F6254B476F00A9C52C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1E0348FC254B551F00A9C52C /* OverviewBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewBudgetView.swift; sourceTree = "<group>"; };
+		1E034904254B55B200A9C52C /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		1E034909254B577F00A9C52C /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		1E03489C254B419500A9C52C /* SmartWallet */ = {
 			isa = PBXGroup;
 			children = (
+				1E0348FB254B4CDF00A9C52C /* Views */,
 				1E0348D6254B427A00A9C52C /* Utils */,
 				1E0348DD254B42B800A9C52C /* Controllers */,
 				1E0348DF254B42E900A9C52C /* Resources */,
@@ -143,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				1E0348D8254B429400A9C52C /* UIFont+Rounder.swift */,
+				1E034909254B577F00A9C52C /* UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -180,6 +188,15 @@
 				1E0348F6254B476F00A9C52C /* CoreDataStack.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1E0348FB254B4CDF00A9C52C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E0348FC254B551F00A9C52C /* OverviewBudgetView.swift */,
+				1E034904254B55B200A9C52C /* BalanceView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E0348EF254B440200A9C52C /* OverviewVC.swift in Sources */,
+				1E03490A254B577F00A9C52C /* UIStackView.swift in Sources */,
 				1E0348A8254B419500A9C52C /* SmartWallet.xcdatamodeld in Sources */,
 				1E0348D9254B429400A9C52C /* UIFont+Rounder.swift in Sources */,
 				1E0348F7254B476F00A9C52C /* CoreDataStack.swift in Sources */,
 				1E03489E254B419500A9C52C /* AppDelegate.swift in Sources */,
+				1E034905254B55B200A9C52C /* BalanceView.swift in Sources */,
+				1E0348FD254B551F00A9C52C /* OverviewBudgetView.swift in Sources */,
 				1E0348A0254B419500A9C52C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,11 +18,13 @@ func makeOverviewVC() -> UINavigationController {
 
 class OverviewVC: UIViewController {
     
+    var overviewBudgetView = OverviewBudgetView()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
-        view.backgroundColor = .red
+        configureLayout()
     }
     
     func configureNavBar() {
@@ -31,6 +33,18 @@ class OverviewVC: UIViewController {
                                                                         .font : UIFont.roundedFont(ofSize: 35, weight: .heavy)]
         navigationController?.navigationBar.titleTextAttributes = [
                                                                    .font : UIFont.roundedFont(ofSize: 20, weight: .bold)]
+    }
+    func configureLayout() {
+        view.addSubview(overviewBudgetView)
+        
+        NSLayoutConstraint.activate([
+            overviewBudgetView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            overviewBudgetView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 2),
+            overviewBudgetView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            overviewBudgetView.heightAnchor.constraint(equalToConstant: 330)
+
+        ])
+       
     }
     
 
