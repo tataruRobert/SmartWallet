@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		1E03489E254B419500A9C52C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03489D254B419500A9C52C /* AppDelegate.swift */; };
 		1E0348A0254B419500A9C52C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03489F254B419500A9C52C /* SceneDelegate.swift */; };
-		1E0348A2254B419500A9C52C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348A1254B419500A9C52C /* ViewController.swift */; };
-		1E0348A5254B419500A9C52C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E0348A3254B419500A9C52C /* Main.storyboard */; };
 		1E0348A8254B419500A9C52C /* SmartWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348A6254B419500A9C52C /* SmartWallet.xcdatamodeld */; };
 		1E0348AA254B419800A9C52C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E0348A9254B419800A9C52C /* Assets.xcassets */; };
 		1E0348AD254B419800A9C52C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E0348AB254B419800A9C52C /* LaunchScreen.storyboard */; };
 		1E0348B8254B419900A9C52C /* SmartWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348B7254B419900A9C52C /* SmartWalletTests.swift */; };
 		1E0348C3254B419900A9C52C /* SmartWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348C2254B419900A9C52C /* SmartWalletUITests.swift */; };
+		1E0348D9254B429400A9C52C /* UIFont+Rounder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348D8254B429400A9C52C /* UIFont+Rounder.swift */; };
+		1E0348EF254B440200A9C52C /* OverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348EE254B440200A9C52C /* OverviewVC.swift */; };
+		1E0348F7254B476F00A9C52C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348F6254B476F00A9C52C /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 		1E03489A254B419500A9C52C /* SmartWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E03489D254B419500A9C52C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E03489F254B419500A9C52C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1E0348A1254B419500A9C52C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1E0348A4254B419500A9C52C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E0348A7254B419500A9C52C /* SmartWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartWallet.xcdatamodel; sourceTree = "<group>"; };
 		1E0348A9254B419800A9C52C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E0348AC254B419800A9C52C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,9 @@
 		1E0348BE254B419900A9C52C /* SmartWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0348C2254B419900A9C52C /* SmartWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartWalletUITests.swift; sourceTree = "<group>"; };
 		1E0348C4254B419900A9C52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E0348D8254B429400A9C52C /* UIFont+Rounder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Rounder.swift"; sourceTree = "<group>"; };
+		1E0348EE254B440200A9C52C /* OverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewVC.swift; sourceTree = "<group>"; };
+		1E0348F6254B476F00A9C52C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +103,12 @@
 		1E03489C254B419500A9C52C /* SmartWallet */ = {
 			isa = PBXGroup;
 			children = (
-				1E03489D254B419500A9C52C /* AppDelegate.swift */,
-				1E03489F254B419500A9C52C /* SceneDelegate.swift */,
-				1E0348A1254B419500A9C52C /* ViewController.swift */,
-				1E0348A3254B419500A9C52C /* Main.storyboard */,
-				1E0348A9254B419800A9C52C /* Assets.xcassets */,
-				1E0348AB254B419800A9C52C /* LaunchScreen.storyboard */,
+				1E0348D6254B427A00A9C52C /* Utils */,
+				1E0348DD254B42B800A9C52C /* Controllers */,
+				1E0348DF254B42E900A9C52C /* Resources */,
+				1E0348EA254B432F00A9C52C /* Model */,
+				1E0348E3254B431400A9C52C /* AppDelegates */,
 				1E0348AE254B419800A9C52C /* Info.plist */,
-				1E0348A6254B419500A9C52C /* SmartWallet.xcdatamodeld */,
 			);
 			path = SmartWallet;
 			sourceTree = "<group>";
@@ -129,6 +129,57 @@
 				1E0348C4254B419900A9C52C /* Info.plist */,
 			);
 			path = SmartWalletUITests;
+			sourceTree = "<group>";
+		};
+		1E0348D6254B427A00A9C52C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1E0348D7254B428000A9C52C /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1E0348D7254B428000A9C52C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E0348D8254B429400A9C52C /* UIFont+Rounder.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1E0348DD254B42B800A9C52C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E0348EE254B440200A9C52C /* OverviewVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1E0348DF254B42E900A9C52C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E0348AB254B419800A9C52C /* LaunchScreen.storyboard */,
+				1E0348A9254B419800A9C52C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1E0348E3254B431400A9C52C /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				1E03489F254B419500A9C52C /* SceneDelegate.swift */,
+				1E03489D254B419500A9C52C /* AppDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		1E0348EA254B432F00A9C52C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E0348A6254B419500A9C52C /* SmartWallet.xcdatamodeld */,
+				1E0348F6254B476F00A9C52C /* CoreDataStack.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +287,6 @@
 			files = (
 				1E0348AD254B419800A9C52C /* LaunchScreen.storyboard in Resources */,
 				1E0348AA254B419800A9C52C /* Assets.xcassets in Resources */,
-				1E0348A5254B419500A9C52C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +311,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E0348EF254B440200A9C52C /* OverviewVC.swift in Sources */,
 				1E0348A8254B419500A9C52C /* SmartWallet.xcdatamodeld in Sources */,
-				1E0348A2254B419500A9C52C /* ViewController.swift in Sources */,
+				1E0348D9254B429400A9C52C /* UIFont+Rounder.swift in Sources */,
+				1E0348F7254B476F00A9C52C /* CoreDataStack.swift in Sources */,
 				1E03489E254B419500A9C52C /* AppDelegate.swift in Sources */,
 				1E0348A0254B419500A9C52C /* SceneDelegate.swift in Sources */,
 			);
@@ -300,14 +352,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1E0348A3254B419500A9C52C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1E0348A4254B419500A9C52C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1E0348AB254B419800A9C52C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
