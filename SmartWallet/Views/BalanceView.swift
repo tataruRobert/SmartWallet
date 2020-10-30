@@ -59,6 +59,7 @@ class BalanceView: UIView {
         
         let stackView = UIStackView.fillStackView(spacing: 10, with: [totalBalanceText, totalBalanceSum])
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        
         addSubview(stackView)
         
         NSLayoutConstraint.activate([

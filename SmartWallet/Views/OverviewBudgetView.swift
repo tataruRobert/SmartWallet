@@ -31,7 +31,10 @@ class OverviewBudgetView: UIView {
     
         let lowerStack = UIStackView.fillStackView(axis: .horizontal, spacing: 20, with: [incomeView, expeneseView])
         let grandStack = UIStackView.fillStackView(axis: .vertical, spacing: 20, with: [balanceView, lowerStack])
+        
         lowerStack.distribution = .fillEqually
+        
+        
         addSubview(grandStack)
         grandStack.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

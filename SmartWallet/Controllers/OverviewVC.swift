@@ -18,13 +18,15 @@ func makeOverviewVC() -> UINavigationController {
 
 class OverviewVC: UIViewController {
     
-    var overviewBudgetView = OverviewBudgetView()
+    private let overviewBudgetView = OverviewBudgetView()
+    private let transactionsTableView = UITableView(frame: .zero, style: .plain)
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
-        configureLayout()
+        configureOverview()
+        confiugureTableView()
     }
     
     func configureNavBar() {
@@ -34,7 +36,8 @@ class OverviewVC: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [
                                                                    .font : UIFont.roundedFont(ofSize: 20, weight: .bold)]
     }
-    func configureLayout() {
+    
+    func configureOverview() {
         view.addSubview(overviewBudgetView)
         
         NSLayoutConstraint.activate([
@@ -47,6 +50,36 @@ class OverviewVC: UIViewController {
        
     }
     
+    func confiugureTableView() {
+        view.addSubview(transactionsTableView)
+        transactionsTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            transactionsTableView.topAnchor.constraint(equalTo: overviewBudgetView.bottomAnchor, constant: 10),
+            transactionsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            transactionsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            transactionsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
+        ])
+       transactionsTableView.dataSource = self
+       transactionsTableView.delegate = self
+        transactionsTableView.separatorStyle = .singleLine
+       transactionsTableView.backgroundColor = .black
+       transactionsTableView.allowsMultipleSelection = false
+       transactionsTableView.allowsSelectionDuringEditing = true
+       transactionsTableView.allowsMultipleSelectionDuringEditing = true
+        
+    }
+    
+    
+}
 
-   
+extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
 }
