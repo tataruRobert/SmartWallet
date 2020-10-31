@@ -21,12 +21,15 @@ class OverviewVC: UIViewController {
     private let overviewBudgetView = OverviewBudgetView()
     private let transactionsTableView = UITableView(frame: .zero, style: .plain)
     
+    private let addButton = UIButton(type: .system)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
         configureOverview()
         confiugureTableView()
+        configureRoundButton()
     }
     
     func configureNavBar() {
@@ -53,12 +56,16 @@ class OverviewVC: UIViewController {
     func confiugureTableView() {
         view.addSubview(transactionsTableView)
         transactionsTableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        transactionsTableView.register(TransactionCell.self, forCellReuseIdentifier: "TransactionCell")
+        
         NSLayoutConstraint.activate([
             transactionsTableView.topAnchor.constraint(equalTo: overviewBudgetView.bottomAnchor, constant: 10),
             transactionsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             transactionsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             transactionsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
         ])
+        
        transactionsTableView.dataSource = self
        transactionsTableView.delegate = self
         transactionsTableView.separatorStyle = .singleLine
@@ -67,6 +74,35 @@ class OverviewVC: UIViewController {
        transactionsTableView.allowsSelectionDuringEditing = true
        transactionsTableView.allowsMultipleSelectionDuringEditing = true
         
+    }
+    
+    func configureRoundButton() {
+        view.addSubview(addButton)
+        addButton.translatesAutoresizingMaskIntoConstraints = false
+        addButton.addTarget(self, action: #selector(roundButtonTapped(_:)), for: .touchUpInside)
+        
+        let configuration = UIImage.SymbolConfiguration(pointSize: 50, weight: .light)
+        addButton.setImage(UIImage(systemName: "plus.circle.fill", withConfiguration: configuration), for: .normal)
+        
+        NSLayoutConstraint.activate([
+            addButton.heightAnchor.constraint(equalToConstant: 60),
+            addButton.widthAnchor.constraint(equalTo: addButton.heightAnchor),
+            addButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            addButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
+        ])
+    }
+    
+    @objc private func roundButtonTapped(_ sender: UIButton) {
+//        if self.isEditing == false{
+//            let addWifiVC = AddWifiVC()
+//
+//            let navController = UINavigationController(rootViewController: addWifiVC)
+//            navController.modalPresentationStyle = .automatic
+//            present(navController, animated: true)
+//
+//        }else {
+//            deleteSelectedWiFiNetworks()
+//        }
     }
     
     
@@ -78,7 +114,10 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as? TransactionCell
+        
+        
+        return cell ?? UITableViewCell()
     }
     
     

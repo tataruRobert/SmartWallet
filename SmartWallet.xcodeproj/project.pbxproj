@@ -20,6 +20,9 @@
 		1E0348FD254B551F00A9C52C /* OverviewBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0348FC254B551F00A9C52C /* OverviewBudgetView.swift */; };
 		1E034905254B55B200A9C52C /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E034904254B55B200A9C52C /* BalanceView.swift */; };
 		1E03490A254B577F00A9C52C /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E034909254B577F00A9C52C /* UIStackView.swift */; };
+		1E034920254DB16800A9C52C /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03491F254DB16700A9C52C /* TransactionCell.swift */; };
+		1E034928254DBC9B00A9C52C /* TransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E034927254DBC9B00A9C52C /* TransactionController.swift */; };
+		1E03492D254DBCE400A9C52C /* Transaction+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03492C254DBCE400A9C52C /* Transaction+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		1E0348FC254B551F00A9C52C /* OverviewBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewBudgetView.swift; sourceTree = "<group>"; };
 		1E034904254B55B200A9C52C /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		1E034909254B577F00A9C52C /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		1E03491F254DB16700A9C52C /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		1E034927254DBC9B00A9C52C /* TransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
+		1E03492C254DBCE400A9C52C /* Transaction+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,8 @@
 			children = (
 				1E0348A6254B419500A9C52C /* SmartWallet.xcdatamodeld */,
 				1E0348F6254B476F00A9C52C /* CoreDataStack.swift */,
+				1E034927254DBC9B00A9C52C /* TransactionController.swift */,
+				1E03492C254DBCE400A9C52C /* Transaction+Convenience.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,10 +201,19 @@
 		1E0348FB254B4CDF00A9C52C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1E03491E254DB14900A9C52C /* Cells */,
 				1E0348FC254B551F00A9C52C /* OverviewBudgetView.swift */,
 				1E034904254B55B200A9C52C /* BalanceView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1E03491E254DB14900A9C52C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1E03491F254DB16700A9C52C /* TransactionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,10 +347,13 @@
 			files = (
 				1E0348EF254B440200A9C52C /* OverviewVC.swift in Sources */,
 				1E03490A254B577F00A9C52C /* UIStackView.swift in Sources */,
+				1E03492D254DBCE400A9C52C /* Transaction+Convenience.swift in Sources */,
 				1E0348A8254B419500A9C52C /* SmartWallet.xcdatamodeld in Sources */,
 				1E0348D9254B429400A9C52C /* UIFont+Rounder.swift in Sources */,
 				1E0348F7254B476F00A9C52C /* CoreDataStack.swift in Sources */,
+				1E034920254DB16800A9C52C /* TransactionCell.swift in Sources */,
 				1E03489E254B419500A9C52C /* AppDelegate.swift in Sources */,
+				1E034928254DBC9B00A9C52C /* TransactionController.swift in Sources */,
 				1E034905254B55B200A9C52C /* BalanceView.swift in Sources */,
 				1E0348FD254B551F00A9C52C /* OverviewBudgetView.swift in Sources */,
 				1E0348A0254B419500A9C52C /* SceneDelegate.swift in Sources */,
