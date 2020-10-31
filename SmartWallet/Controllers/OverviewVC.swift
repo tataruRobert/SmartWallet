@@ -23,6 +23,8 @@ class OverviewVC: UIViewController {
     
     private let addButton = UIButton(type: .system)
     
+    var transactions = [Transaction]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,13 +112,13 @@ class OverviewVC: UIViewController {
 
 extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as? TransactionCell
         
-        
+
         return cell ?? UITableViewCell()
     }
     
